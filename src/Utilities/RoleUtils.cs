@@ -1,4 +1,5 @@
 ﻿using AmongUs.GameOptions;
+using BetterAmongUs.Data.Config;
 using BetterAmongUs.Modules;
 
 namespace BetterAmongUs.Utilities;
@@ -107,16 +108,23 @@ internal static class RoleUtils
             return string.Empty;
         }
 
-        if (playerData.PlayerId != PlayerControl.LocalPlayer.PlayerId && !playerData.IsImpostorTeammate())
+        if (playerData.PlayerId != PlayerControl.LocalPlayer.PlayerId)
         {
-            if (PlayerControl.LocalPlayer.IsAlive())
+            if (playerData.IsImpostorTeammate())
             {
-                return string.Empty;
+                if (!BAUConfigs.ShowImpostorRoles.Value)
+                    return string.Empty;
             }
-
-            if (PlayerControl.LocalPlayer.IsGhostRole())
+            else
             {
-                return string.Empty;
+                if (PlayerControl.LocalPlayer.IsAlive())
+                    return string.Empty;
+
+                if (PlayerControl.LocalPlayer.IsGhostRole())
+                    return string.Empty;
+
+                if (!BAUConfigs.ShowGhostRoles.Value)
+                    return string.Empty;
             }
         }
 

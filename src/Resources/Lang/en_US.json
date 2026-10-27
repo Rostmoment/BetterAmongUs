@@ -66,6 +66,8 @@
   "BetterOption.BetterMinimapColors": "Better Minimap Colors",
   "BetterOption.BetterColorblindText": "Better Colorblind Text",
   "BetterOption.CompressSettingFiles": "Compress Setting Files",
+  "BetterOption.ShowImpostorRoles": "Show Impostor Roles",
+  "BetterOption.ShowGhostRoles": "Show Roles As Ghost",
 
   "BetterOption.SaveData": "Open Save Data",
   "BetterOption.ToVanilla": "Switch To Vanilla",

@@ -61,6 +61,8 @@ internal static class OptionsMenuBehaviourPatch
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_VentColorGroups, BAUConfigs.VentColorGroups, 2, __instance, MiniMapBehaviourPatch.ForceCloseMiniMap);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_BetterColorblindText, BAUConfigs.BetterColorblindText, 2, __instance, CosmeticsLayerPatch.UpdateAllColorblindText);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_CompressSettingFiles, BAUConfigs.CompressSettingFiles, 2, __instance, ConvertAllSettingFiles);
+        ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_ShowImpostorRoles, BAUConfigs.ShowImpostorRoles, 2, __instance);
+        ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_ShowGhostRoles, BAUConfigs.ShowGhostRoles, 2, __instance);
 
         // Button options (no toggle)
         if (!BAUPlugin.ModInfo.Starlight)

@@ -99,6 +99,16 @@ internal static class BAUConfigs
     internal static BAUConfigEntry<int> SettingsPreset { get; } = new("Mod", "SettingsPreset", 0);
 
     /// <summary>
+    /// Show teammates' roles when playing as impostor.
+    /// </summary>
+    internal static BAUConfigEntry<bool> ShowImpostorRoles { get; } = new("Better Options", "ShowImpostorRoles", true);
+
+    /// <summary>
+    /// Show everyone's roles when dead.
+    /// </summary>
+    internal static BAUConfigEntry<bool> ShowGhostRoles { get; } = new("Better Options", "ShowGhostRoles", false);
+
+    /// <summary>
     /// Loads configuration options from BepInEx config file.
     /// </summary>
     internal static void LoadConfigs()
@@ -108,7 +118,7 @@ internal static class BAUConfigs
             ForceOwnLanguage, ChatDarkMode, ChatInGameplay, LobbyPlayerInfo,
             DisableLobbyTheme, UnlockFPS, ShowFPS,
             MinimapIcons, VentColorGroups, CommandPrefix,
-            FavoriteColor, SettingsPreset
+            FavoriteColor, SettingsPreset, ShowImpostorRoles, ShowGhostRoles
         ]);
 
         OptionsMenuBehaviourPatch.UpdateFrameRate();

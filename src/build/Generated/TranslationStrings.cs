@@ -339,6 +339,16 @@ public static class TranslationStrings
     public static readonly TranslationString BetterOption_CompressSettingFiles = new("BetterOption.CompressSettingFiles");
 
     /// <summary>
+    /// Base Translation: Show Impostor Roles
+    /// </summary>
+    public static readonly TranslationString BetterOption_ShowImpostorRoles = new("BetterOption.ShowImpostorRoles");
+
+    /// <summary>
+    /// Base Translation: Show Roles As Ghost
+    /// </summary>
+    public static readonly TranslationString BetterOption_ShowGhostRoles = new("BetterOption.ShowGhostRoles");
+
+    /// <summary>
     /// Base Translation: Open Save Data
     /// </summary>
     public static readonly TranslationString BetterOption_SaveData = new("BetterOption.SaveData");
