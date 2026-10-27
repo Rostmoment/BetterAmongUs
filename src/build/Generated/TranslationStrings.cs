@@ -349,6 +349,11 @@ public static class TranslationStrings
     public static readonly TranslationString BetterOption_ShowGhostRoles = new("BetterOption.ShowGhostRoles");
 
     /// <summary>
+    /// Base Translation: Cooldowns With Decimals
+    /// </summary>
+    public static readonly TranslationString BetterOption_DecimalCooldowns = new("BetterOption.DecimalCooldowns");
+
+    /// <summary>
     /// Base Translation: Open Save Data
     /// </summary>
     public static readonly TranslationString BetterOption_SaveData = new("BetterOption.SaveData");

@@ -109,6 +109,11 @@ internal static class BAUConfigs
     internal static BAUConfigEntry<bool> ShowGhostRoles { get; } = new("Better Options", "ShowGhostRoles", false);
 
     /// <summary>
+    /// Show decimal for action buttons timers
+    /// </summary>
+    internal static BAUConfigEntry<bool> DecimalCooldowns { get; } = new("Better Options", "DecimalCooldowns", true);
+
+    /// <summary>
     /// Loads configuration options from BepInEx config file.
     /// </summary>
     internal static void LoadConfigs()
@@ -118,7 +123,8 @@ internal static class BAUConfigs
             ForceOwnLanguage, ChatDarkMode, ChatInGameplay, LobbyPlayerInfo,
             DisableLobbyTheme, UnlockFPS, ShowFPS,
             MinimapIcons, VentColorGroups, CommandPrefix,
-            FavoriteColor, SettingsPreset, ShowImpostorRoles, ShowGhostRoles
+            FavoriteColor, SettingsPreset, ShowImpostorRoles, ShowGhostRoles,
+            DecimalCooldowns
         ]);
 
         OptionsMenuBehaviourPatch.UpdateFrameRate();
