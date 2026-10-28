@@ -23,7 +23,6 @@ public static class ButtonCooldownPatch
         if (text == null)
             return;
 
-        // Расширяем один раз: если ширина уже достаточная, ничего не делаем
         var rect = text.rectTransform;
         if (rect.sizeDelta.x < BAUPlugin.Constants.MIN_TEXT_DECIMAL_COOLDOWN_WIDTH)
         {

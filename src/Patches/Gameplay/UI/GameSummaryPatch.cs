@@ -14,6 +14,8 @@ namespace BetterAmongUs.Patches.Gameplay.Managers;
 [HarmonyPatch]
 internal static class GameSummaryPatch
 {
+    internal static string SummaryText { get; private set; }
+
     [HarmonyPatch(typeof(EndGameManager), nameof(EndGameManager.SetEverythingUp))]
     [HarmonyPostfix]
     private static void EndGameManager_SetEverythingUp_Postfix(EndGameManager __instance)
@@ -58,7 +60,8 @@ internal static class GameSummaryPatch
         var summaryHeader = BuildSummaryHeader(winTeam, winTag, winColor);
         var playerList = BuildPlayerList();
 
-        summaryText.text = $"{summaryHeader}\n\n<size=58%>{playerList}</size>";
+        SummaryText = $"{summaryHeader}\n\n<size=58%>{playerList}</size>";
+        summaryText.text = SummaryText;
         BAUPlugin.Logger.LogHeader("Game Summary End", "GameSummary");
     }
 
