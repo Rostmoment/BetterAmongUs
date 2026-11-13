@@ -123,7 +123,7 @@ internal static class RoleUtils
                 if (PlayerControl.LocalPlayer.IsGhostRole())
                     return string.Empty;
 
-                if (!BAUConfigs.ShowGhostRoles.Value)
+                if (!BAUConfigs.ShowInfoWhenGhost.Value)
                     return string.Empty;
             }
         }

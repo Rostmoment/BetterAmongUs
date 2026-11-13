@@ -104,9 +104,9 @@ internal static class BAUConfigs
     internal static BAUConfigEntry<bool> ShowImpostorRoles { get; } = new("Better Options", "ShowImpostorRoles", true);
 
     /// <summary>
-    /// Show everyone's roles when dead.
+    /// Show more information when player is normal ghost (not Guardian Angel or Infuencer) and dead, like roles anonymous votes
     /// </summary>
-    internal static BAUConfigEntry<bool> ShowGhostRoles { get; } = new("Better Options", "ShowGhostRoles", false);
+    internal static BAUConfigEntry<bool> ShowInfoWhenGhost { get; } = new("Better Options", "ShowInfoWhenGhost", false);
 
     /// <summary>
     /// Show decimal for action buttons timers
@@ -123,7 +123,7 @@ internal static class BAUConfigs
             ForceOwnLanguage, ChatDarkMode, ChatInGameplay, LobbyPlayerInfo,
             DisableLobbyTheme, UnlockFPS, ShowFPS,
             MinimapIcons, VentColorGroups, CommandPrefix,
-            FavoriteColor, SettingsPreset, ShowImpostorRoles, ShowGhostRoles,
+            FavoriteColor, SettingsPreset, ShowImpostorRoles, ShowInfoWhenGhost,
             DecimalCooldowns
         ]);
 

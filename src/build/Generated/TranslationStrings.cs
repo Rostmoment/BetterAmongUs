@@ -344,9 +344,9 @@ public static class TranslationStrings
     public static readonly TranslationString BetterOption_ShowImpostorRoles = new("BetterOption.ShowImpostorRoles");
 
     /// <summary>
-    /// Base Translation: Show Roles As Ghost
+    /// Base Translation: Show Infor When Ghost
     /// </summary>
-    public static readonly TranslationString BetterOption_ShowGhostRoles = new("BetterOption.ShowGhostRoles");
+    public static readonly TranslationString BetterOption_ShowInfoWhenGhost = new("BetterOption.ShowInfoWhenGhost");
 
     /// <summary>
     /// Base Translation: Cooldowns With Decimals
