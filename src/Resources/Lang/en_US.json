@@ -109,6 +109,10 @@
   "BetterSetting.Setting.RemovePetOnDeath": "Remove pet on death",
   "BetterSetting.Setting.HideAndSeekImpNum": "# Seekers",
   "BetterSetting.TempSetting.HideAndSeekImpNum": "Seeker",
+  "BetterSetting.MainHeader.Saves": "<color=#ff9b2f>Saved Settings</color>",
+  "BetterSetting.Setting.SaveSettings": "Save current settings",
+  "BetterSetting.Setting.SaveFile": "Save file",
+  "BetterSetting.Setting.LoadSettings": "Load selected file",
 
   "AntiCheat": "Anti-Cheat",
   "AntiCheat.Ban": "Banned",

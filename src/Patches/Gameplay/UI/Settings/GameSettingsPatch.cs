@@ -1,4 +1,5 @@
-﻿using BetterAmongUs.Generated;
+﻿using BetterAmongUs.Data;
+using BetterAmongUs.Generated;
 using BetterAmongUs.Modules;
 using BetterAmongUs.Modules.OptionItems;
 using BetterAmongUs.Modules.OptionItems.NoneOption;
@@ -59,6 +60,12 @@ internal static class GameSettingsPatch
 
         OptionHeaderItem.Create(BetterSettingsTab, TranslationStrings.BetterSetting_MainHeader_System);
         OptionPresetItem.Create();
+
+        // Save / load room settings
+        OptionHeaderItem.Create(BetterSettingsTab, TranslationStrings.BetterSetting_MainHeader_Saves);
+        OptionButtonItem.Create(BetterSettingsTab, TranslationStrings.BetterSetting_Setting_SaveSettings, SettingsSaveManager.Save);
+        OptionSaveFileItem.Create();
+        OptionButtonItem.Create(BetterSettingsTab, TranslationStrings.BetterSetting_Setting_LoadSettings, SettingsSaveManager.Load);
 
         // Anti-Cheat Settings section
         {

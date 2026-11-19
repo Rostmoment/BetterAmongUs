@@ -61,7 +61,11 @@ internal sealed class ForceSkipCommand : BaseCommand
                         VotedForId = playerVoteArea.VotedForId
                     };
                 }
-                MeetingHud.Instance.RpcVotingComplete(array, networkedPlayerInfo, tie, false, 0);
+                bool overruled = MeetingHud.Instance.judgeOverrulesQueue.Count > 0;
+                ushort nonceOverruled = 0;
+                if (overruled)
+                    nonceOverruled = MeetingHud.Instance.judgeOverrulesQueue[0].OverruleNonce;
+                MeetingHud.Instance.RpcVotingComplete(array, networkedPlayerInfo, tie, overruled, nonceOverruled);
             }
         }
     }

@@ -539,6 +539,26 @@ public static class TranslationStrings
     public static readonly TranslationString BetterSetting_TempSetting_HideAndSeekImpNum = new("BetterSetting.TempSetting.HideAndSeekImpNum");
 
     /// <summary>
+    /// Base Translation: &lt;color=#ff9b2f&gt;Saved Settings&lt;/color&gt;
+    /// </summary>
+    public static readonly TranslationString BetterSetting_MainHeader_Saves = new("BetterSetting.MainHeader.Saves");
+
+    /// <summary>
+    /// Base Translation: Save current settings
+    /// </summary>
+    public static readonly TranslationString BetterSetting_Setting_SaveSettings = new("BetterSetting.Setting.SaveSettings");
+
+    /// <summary>
+    /// Base Translation: Save file
+    /// </summary>
+    public static readonly TranslationString BetterSetting_Setting_SaveFile = new("BetterSetting.Setting.SaveFile");
+
+    /// <summary>
+    /// Base Translation: Load selected file
+    /// </summary>
+    public static readonly TranslationString BetterSetting_Setting_LoadSettings = new("BetterSetting.Setting.LoadSettings");
+
+    /// <summary>
     /// Base Translation: Anti-Cheat
     /// </summary>
     public static readonly TranslationString AntiCheat = new("AntiCheat");
