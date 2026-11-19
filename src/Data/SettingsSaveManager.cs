@@ -49,7 +49,11 @@ internal static class SettingsSaveManager
 
             file.Save();
             var selector = OptionSaveFileItem.Instance;
-            if (selector != null) selector.Refresh(path);
+            if (selector != null)
+            {
+                selector.Refresh(path);
+                selector.UpdateVisuals(false);
+            }
             BetterNotificationManager.Notify($"Saved: {Path.GetFileNameWithoutExtension(path)}", 2.5f);
         }
         catch (Exception ex)

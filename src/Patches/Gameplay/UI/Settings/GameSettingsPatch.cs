@@ -112,7 +112,14 @@ internal static class GameSettingsPatch
         if (BAUModdedSupportFlags.HasFlag(BAUModdedSupportFlags.Disable_AllGameOptions))
             return;
 
-        SetupSettings();
+        try
+        {
+            SetupSettings();
+        }
+        catch (Exception ex)
+        {
+            BAUPlugin.Logger.Error(ex);
+        }
 
         // Adjust menu layout
         __instance.gameObject.transform.SetLocalY(-0.1f);

@@ -44,7 +44,6 @@ internal sealed class OptionSaveFileItem : OptionStringItem
         Range = new IntRange(0, Math.Max(0, files.Length - 1));
         int index = select == null ? -1 : Array.IndexOf(files, select);
         Value = index >= 0 ? index : Math.Clamp(Value, 0, Range.max);
-        UpdateVisuals(false);
     }
 
     public override string ValueAsString()
