@@ -129,6 +129,7 @@ internal static class Utils
     internal static PlayerControl? PlayerFromNetId(NetId netId) =>
         BAUPlugin.AllPlayerControls.FirstOrDefault(player => player.NetId == netId);
 
+
     // Chat functionality
     /// <summary>
     /// Adds a private chat message with custom formatting options.
@@ -190,6 +191,19 @@ internal static class Utils
         catch
         {
         }
+    }
+
+
+    /// <summary>
+    /// Removes all chat bubbles from the chat.
+    /// </summary>
+    internal static void ClearChat()
+    {
+        if (!HudManager.InstanceExists)
+            return;
+
+        // Clear all chat bubbles
+        HudManager.Instance.Chat.chatBubblePool.ReclaimAll();
     }
 
     // System type checks

@@ -39,18 +39,6 @@ internal static class ChatPatch
     }
 
     /// <summary>
-    /// Removes all chat bubbles from the chat.
-    /// </summary>
-    internal static void ClearChat()
-    {
-        if (!HudManager.InstanceExists)
-            return;
-
-        // Clear all chat bubbles
-        HudManager.Instance.Chat.chatBubblePool.ReclaimAll();
-    }
-
-    /// <summary>
     /// Removes all player chat bubbles from the chat, excluding command bubbles.
     /// </summary>
     internal static void ClearPlayerChats()

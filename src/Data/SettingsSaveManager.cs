@@ -8,8 +8,8 @@ namespace BetterAmongUs.Data;
 
 internal static class SettingsSaveManager
 {
-    private const string VanillaKey = "Vanilla.Options";
-    private const string GameModeKey = "Vanilla.GameMode";
+    private const string VANILLA_KEY = "Vanilla.Options";
+    private const string GAME_MODE_LEY = "Vanilla.GameMode";
 
     private static string SavesFolder => Path.Combine(BetterDataManager.Folders.settingsFolderPath, "Saves");
 
@@ -43,8 +43,8 @@ internal static class SettingsSaveManager
             if (manager != null && manager.CurrentGameOptions != null)
             {
                 var bytes = manager.gameOptionsFactory.ToBytes(manager.CurrentGameOptions, false);
-                file.Settings[VanillaKey] = Convert.ToBase64String(bytes.ToArray());
-                file.Settings[GameModeKey] = (int)manager.currentGameMode;
+                file.Settings[VANILLA_KEY] = Convert.ToBase64String(bytes.ToArray());
+                file.Settings[GAME_MODE_LEY] = (int)manager.currentGameMode;
             }
 
             file.Save();
@@ -82,7 +82,7 @@ internal static class SettingsSaveManager
             var current = BetterDataManager.Files.BetterGameSettingsFile;
             foreach (var kvp in file.Settings)
             {
-                if (kvp.Key == BetterGameSettingsFile.SETTINGS_VERSION_KEY || kvp.Key == VanillaKey || kvp.Key == GameModeKey) continue;
+                if (kvp.Key == BetterGameSettingsFile.SETTINGS_VERSION_KEY || kvp.Key == VANILLA_KEY || kvp.Key == GAME_MODE_LEY) continue;
                 current.Settings[kvp.Key] = kvp.Value;
             }
             current.Save();
@@ -94,12 +94,12 @@ internal static class SettingsSaveManager
 
             // Vanilla settings (host in lobby only)
             string message = "Better settings loaded!";
-            if (file.Settings.TryGetValue(VanillaKey, out var raw) && raw is string base64)
+            if (file.Settings.TryGetValue(VANILLA_KEY, out var raw) && raw is string base64)
             {
                 if (GameState.IsHost && GameState.IsLobby)
                 {
                     var manager = GameOptionsManager.Instance;
-                    bool sameMode = !file.Settings.TryGetValue(GameModeKey, out var mode) || mode is not int modeInt || modeInt == (int)manager.currentGameMode;
+                    bool sameMode = !file.Settings.TryGetValue(GAME_MODE_LEY, out var mode) || mode is not int modeInt || modeInt == (int)manager.currentGameMode;
                     if (sameMode)
                     {
                         var opts = manager.gameOptionsFactory.FromBytes(Convert.FromBase64String(base64));
