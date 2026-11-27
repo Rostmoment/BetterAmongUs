@@ -141,7 +141,7 @@ internal static class GameSummaryPatch
             ),
             GameOverReason.CrewmateDisconnect => (
                 Translator.GetString(StringNames.ImpostorsCategory),
-                TranslationStrings.Game_Summary_Result_CrematesDisconnected.LocalizedString,
+                TranslationStrings.Game_Summary_Result_CrewmatesDisconnected.LocalizedString,
                 Colors.ImpostorRed.ColorToHex()
             ),
 

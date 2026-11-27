@@ -67,7 +67,7 @@
   "BetterOption.BetterColorblindText": "Better Colorblind Text",
   "BetterOption.CompressSettingFiles": "Compress Setting Files",
   "BetterOption.ShowImpostorRoles": "Show Impostor Roles",
-  "BetterOption.ShowInfoWhenGhost": "Show Infor When Ghost",
+  "BetterOption.ShowInfoWhenGhost": "Show Info When Ghost",
   "BetterOption.DecimalCooldowns": "Cooldowns With Decimals",
 
   "BetterOption.SaveData": "Open Save Data",
@@ -161,7 +161,7 @@
   "Game.Summary.Result.ImpostorsDisconnected": "Impostors Disconnected",
   "Game.Summary.Result.CrewOutnumbered": "Crew Outnumbered",
   "Game.Summary.Result.Sabotage": "Sabotage",
-  "Game.Summary.Result.CrematesDisconnected": "Cremates Disconnected",
+  "Game.Summary.Result.CrewmatesDisconnected": "Crewmates Disconnected",
   "Game.Summary.Result.TimeOut": "Time Out",
   "Game.Summary.Result.NoSurvivors": "No Survivors"
 }

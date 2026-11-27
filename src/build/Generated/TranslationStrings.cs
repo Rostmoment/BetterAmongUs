@@ -344,7 +344,7 @@ public static class TranslationStrings
     public static readonly TranslationString BetterOption_ShowImpostorRoles = new("BetterOption.ShowImpostorRoles");
 
     /// <summary>
-    /// Base Translation: Show Infor When Ghost
+    /// Base Translation: Show Info When Ghost
     /// </summary>
     public static readonly TranslationString BetterOption_ShowInfoWhenGhost = new("BetterOption.ShowInfoWhenGhost");
 
@@ -789,9 +789,9 @@ public static class TranslationStrings
     public static readonly TranslationString Game_Summary_Result_Sabotage = new("Game.Summary.Result.Sabotage");
 
     /// <summary>
-    /// Base Translation: Cremates Disconnected
+    /// Base Translation: Crewmates Disconnected
     /// </summary>
-    public static readonly TranslationString Game_Summary_Result_CrematesDisconnected = new("Game.Summary.Result.CrematesDisconnected");
+    public static readonly TranslationString Game_Summary_Result_CrewmatesDisconnected = new("Game.Summary.Result.CrewmatesDisconnected");
 
     /// <summary>
     /// Base Translation: Time Out
